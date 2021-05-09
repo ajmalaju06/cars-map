@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CarsList from "../cars/CarsList";
-import MapView from "../maps/MapView";
-import { data } from "../../datas/data";
+import CarsList from "../components/cars/CarsList";
+import MapView from "../components/maps/MapView";
+import { data } from "../datas/data";
 
 function FindCars() {
   const [cars, SetCars] = useState([]);
