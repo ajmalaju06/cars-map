@@ -1,0 +1,162 @@
+.findCars {
+  width: 100%;
+  height: 100vh;
+  background-color: $background;
+  display: flex;
+  position: relative;
+  .side-bar {
+    min-width: 350px;
+    position: relative;
+    box-shadow: 0px 1px 10px 0px gray;
+    padding: 10px;
+    transition: all 0.3s;
+    &.false {
+      min-width: 0px;
+      max-width: 0px;
+      padding: 0px;
+      .search-box {
+        display: none;
+      }
+      ul {
+        display: none;
+      }
+      .cars-list-container {
+        display: none;
+      }
+    }
+    .search-box {
+      display: flex;
+      padding: 5px;
+      box-shadow: 0px 1px 5px 0px gray;
+      border-radius: 4px;
+      .input-style {
+        flex: 1;
+        outline: none;
+        border: none;
+      }
+      .icon-style {
+        padding: 5px;
+      }
+    }
+    .cars-list-container {
+      padding: 5px 5px;
+      ul {
+        list-style: none;
+        padding: 0px;
+        li {
+          padding: 15px;
+          border-bottom: solid 1px $borderBottomColor;
+          font-size: 14px;
+          color: $fontColor;
+          display: flex;
+          align-items: center;
+          &:hover {
+            cursor: pointer;
+            background-color: whitesmoke;
+          }
+          &.active {
+            background: whitesmoke;
+          }
+          .car-name {
+            flex: 1;
+          }
+          .indicate {
+            display: block;
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 15px;
+            margin-right: 10px;
+          }
+          .badge {
+            display: block;
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 2px;
+          }
+          .yellow {
+            background-color: $indicatorYellow;
+          }
+          .red {
+            background-color: $indicatorRed;
+          }
+          .blue {
+            background-color: $indicatorBlue;
+          }
+          .gray {
+            background-color: $indicatorGray;
+          }
+          .green {
+            background-color: $indicatorGreen;
+          }
+        }
+      }
+    }
+    .navbar-button {
+      position: absolute;
+      width: 25px;
+      height: 38px;
+      background-color: white;
+      top: 10px;
+      left: 100%;
+      z-index: 999;
+      color: $fontColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 0px 5px #aaaaaa;
+    }
+  }
+  .pop-up {
+    background-color: white;
+    position: absolute;
+    // top: 0px;
+    right: 29%;
+    left: 44%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 0px grey;
+    display: flex;
+    padding: 10px;
+    animation: myfirst 3s 1;
+
+    &.true {
+      top: 20px;
+      @keyframes myfirst {
+        0% {
+          top: 0px;
+        }
+        25% {
+          top: 20px;
+        }
+      }
+    }
+    &.false {
+      display: none;
+      top: 0;
+    }
+
+    .popup-indicate {
+      display: block;
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 15px;
+      margin-right: 10px;
+      background-color: $indicatorRed;
+      margin-top: 5px;
+    }
+    .address-txt {
+      font-size: 11px;
+      color: $fontColor;
+      margin-left: 5px;
+      flex: 1;
+    }
+  }
+}
