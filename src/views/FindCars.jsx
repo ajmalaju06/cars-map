@@ -37,6 +37,18 @@ function FindCars() {
         <span className="popup-indicate"></span>
         <span className="address-txt">{address.place}</span>
       </div>
+
+      <div className="right-icons-container">
+        <span className="menu-span">
+          <span className="pen-span">
+            <i class="far fa-edit"></i>
+          </span>
+          <i class="fas fa-ellipsis-v"></i>
+        </span>
+        <span className="arrow_span">
+          <i className="fas fa-chevron-right"></i>
+        </span>
+      </div>
     </div>
   );
 }

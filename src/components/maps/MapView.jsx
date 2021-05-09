@@ -36,17 +36,16 @@ function MapView({ mapData, google, getaddress }) {
   };
 
   return (
-    <div>
-      <Map
-        google={google}
-        zoom={mapConfig.zoom}
-        style={mapConfig.mapStyles}
-        initialCenter={mapConfig.initialCenter}
-        disableDefaultUI={true}
-      >
-        {mapPoints()}
-      </Map>
-    </div>
+    <Map
+      google={google}
+      zoom={mapConfig.zoom}
+      style={mapConfig.mapStyles}
+      initialCenter={mapConfig.initialCenter}
+      disableDefaultUI={true}
+      zoomControl={true}
+    >
+      {mapPoints()}
+    </Map>
   );
 }
 

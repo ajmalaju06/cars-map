@@ -8,7 +8,6 @@ function Cars({ dataList, details }) {
 
   useEffect(() => {
     setCarsList(dataList);
-    console.log(carsList);
   }, [dataList]);
 
   const searchCar = (value) => {
@@ -20,7 +19,6 @@ function Cars({ dataList, details }) {
     } else {
       setCarsList(dataList);
     }
-    console.log(dataList);
   };
 
   const selectedCar = (item, idx) => {
